@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ref, get } from "firebase/database";
 import { db } from "@/app/config/realTime";
+import Post from "@/components/Post";
 
 const Products = () => {
   const [item, setItem] = useState([]);
@@ -34,12 +35,10 @@ const Products = () => {
       <header>
         <Navigation />
       </header>
-      <main className="flex-grow flex flex-col justify-center items-center">
+      <main className="grid grid-cols-2">
         {item.map((product) => (
-          <div>
-            <p> {product.productName}</p>
-            <p>{product.productPrice}</p>
-            <p>{product.productImage}</p>
+          <div key={product.key} >
+            <Post product={product} />
           </div>
         ))}
       </main>
