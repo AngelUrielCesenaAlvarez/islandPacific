@@ -7,27 +7,29 @@ export default function Profile() {
   const [isClient, setIsClient] = useState(false);
   const [profile, setProfile] = useState(null);
   const router = useRouter();
-  const { access_token } = router.query;
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   useEffect(() => {
-    if (isClient && access_token) {
-      axios.get('https://api.mercadolibre.com/users/me', {
-        headers: {
-          Authorization: `Bearer ${access_token}`
-        }
-      })
-      .then(response => {
-        setProfile(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching profile:', error);
-      });
+    if (isClient) {
+      const { access_token } = router.query;
+      if (access_token) {
+        axios.get('https://api.mercadolibre.com/users/me', {
+          headers: {
+            Authorization: `Bearer ${access_token}`
+          }
+        })
+        .then(response => {
+          setProfile(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching profile:', error);
+        });
+      }
     }
-  }, [isClient, access_token]);
+  }, [isClient, router.query]);
 
   if (!isClient || !profile) {
     return <div>Loading...</div>;
