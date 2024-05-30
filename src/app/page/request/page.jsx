@@ -11,7 +11,7 @@ const Request = () => {
         <Navigation />
       </header>
       <main className="flex-grow flex flex-col justify-center items-center">
-        <p>Pedidos de mayoreo </p>
+        <p>Pedidos de mayoreo</p>
         <Formulario/>
       </main>
       <footer>
