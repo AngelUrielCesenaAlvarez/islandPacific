@@ -12,7 +12,7 @@ const Request = () => {
       </header>
       <main className="flex-grow flex flex-col justify-center items-center">
         <p>Pedidos de mayoreo </p>
-        <Formulario />  {/* Renderizar el componente Formulario correctamente */}
+        <Formulario />  
       </main>
       <footer>
         <Footer />

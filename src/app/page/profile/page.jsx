@@ -1,5 +1,6 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router'; // Asegúrate de importar useRouter porque luego tienes un error por dos horas
 import axios from 'axios';
 
 export default function Profile() {

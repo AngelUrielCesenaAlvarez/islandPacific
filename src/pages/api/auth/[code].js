@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 
     console.log('Access token received:', access_token); // Log del token de acceso
 
-    // Aquí rediriges a donde sea necesario en tu aplicación
+    // Aquí se redirige a donde sea necesario en la aplicación
     res.redirect(`/profile?access_token=${access_token}`);
   } catch (error) {
     console.error('Error getting access token', error.response ? error.response.data : error.message);
