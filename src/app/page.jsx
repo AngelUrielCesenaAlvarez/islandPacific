@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import LoginButton from "@/components/LoginButton";
 import Navigation from "@/components/Navigation";
 import React from "react";
 
@@ -9,6 +10,7 @@ const HomePage = () => {
         <Navigation />
       </header>
       <main className="flex-grow">
+        <LoginButton/>
         <div className="flex flex-col items-center m-28 p-2 border-2">
           <p className="mb-4">Quienes somos</p>
           <p>
