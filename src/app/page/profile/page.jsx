@@ -1,12 +1,9 @@
-'use client';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function Profile() {
   const [isClient, setIsClient] = useState(false);
   const [profile, setProfile] = useState(null);
-  const router = useRouter();
 
   useEffect(() => {
     setIsClient(true);
@@ -14,7 +11,9 @@ export default function Profile() {
 
   useEffect(() => {
     if (isClient) {
+      const router = useRouter();
       const { access_token } = router.query;
+
       if (access_token) {
         axios.get('https://api.mercadolibre.com/users/me', {
           headers: {
@@ -26,10 +25,11 @@ export default function Profile() {
         })
         .catch(error => {
           console.error('Error fetching profile:', error);
+          setProfile(null); // Manejar el error estableciendo el perfil como null
         });
       }
     }
-  }, [isClient, router.query]);
+  }, [isClient]);
 
   if (!isClient || !profile) {
     return <div>Loading...</div>;
