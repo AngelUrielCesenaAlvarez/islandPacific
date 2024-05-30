@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import config from '@/app/config/mercadoLibre';
+
+import config from '@/app/pages/config/mercadoLibre';
 
 const LoginButton = () => {
   const handleLogin = () => {
