@@ -4,12 +4,17 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function Profile() {
+  const [isClient, setIsClient] = useState(false);
+  const [profile, setProfile] = useState(null);
   const router = useRouter();
   const { access_token } = router.query;
-  const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    if (access_token) {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (isClient && access_token) {
       axios.get('https://api.mercadolibre.com/users/me', {
         headers: {
           Authorization: `Bearer ${access_token}`
@@ -22,9 +27,9 @@ export default function Profile() {
         console.error('Error fetching profile:', error);
       });
     }
-  }, [access_token]);
+  }, [isClient, access_token]);
 
-  if (!profile) {
+  if (!isClient || !profile) {
     return <div>Loading...</div>;
   }
 
