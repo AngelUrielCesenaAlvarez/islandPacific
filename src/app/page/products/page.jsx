@@ -36,7 +36,7 @@ const Products = () => {
       <header>
         <Navigation />
       </header>
-      <main className="grid grid-cols-3">
+      <main className="grid grid-cols-2">
         {items.map((product) => (
           <Post key={product.key} product={product} addToCart={addToCart} />
         ))}
