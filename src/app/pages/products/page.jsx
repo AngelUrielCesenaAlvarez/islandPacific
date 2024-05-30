@@ -1,13 +1,15 @@
-"use client";
+'use client'
 import React, { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ref, get } from "firebase/database";
 import { db } from "@/app/config/realTime";
 import Post from "@/components/Post";
+import { useCart } from "@/app/context/CartContext";
 
 const Products = () => {
-  const [item, setItem] = useState([]);
+  const [items, setItems] = useState([]);
+  const { addToCart } = useCart(); // Desestructuramos addToCart
 
   useEffect(() => {
     const loadProducts = () => {
@@ -19,8 +21,7 @@ const Products = () => {
               key,
               ...value,
             }));
-
-            setItem(data);
+            setItems(data);
           }
         })
         .catch((error) => {
@@ -36,10 +37,8 @@ const Products = () => {
         <Navigation />
       </header>
       <main className="grid grid-cols-2">
-        {item.map((product) => (
-          <div key={product.key} >
-            <Post product={product} />
-          </div>
+        {items.map((product) => (
+          <Post key={product.key} product={product} addToCart={addToCart} />
         ))}
       </main>
       <footer>

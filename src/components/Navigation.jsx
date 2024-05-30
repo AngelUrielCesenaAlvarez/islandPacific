@@ -13,6 +13,8 @@ const Navigation = () => {
         <Link href="/pages/products">Products</Link>
         <Link href="/pages/installations">Installation</Link>
         <Link href="/pages/request">Request</Link>
+        <Link href="/pages/cartContent">Cart</Link>
+
       </div>
     </div>
   );
