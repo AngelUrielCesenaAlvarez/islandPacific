@@ -26,47 +26,50 @@ const CartContent = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gray-100">
       <header>
         <Navigation />
       </header>
       <main className="flex-grow p-5">
-        <h1 className="text-2xl mb-5">Carrito de compras</h1>
+        <h1 className="text-3xl font-bold mb-5 text-gray-800">Carrito de compras</h1>
         {cart.length === 0 ? (
-          <p>Tu carrito está vacío.</p>
+          <p className="text-gray-600">Tu carrito está vacío.</p>
         ) : (
           <div>
             {cart.map((product, index) => (
-              <div key={index} className="flex items-center justify-between border-b py-2">
-                <div>
-                  <p>{product.productName}</p>
-                  <p>{product.productPrice}</p>
-                  <div className="flex items-center">
-                    <button
-                      onClick={() => handleDecrement(product)}
-                      className="bg-gray-300 text-black px-2 py-1"
-                    >
-                      -
-                    </button>
-                    <span className="px-4">{product.quantity}</span>
-                    <button
-                      onClick={() => handleIncrement(product)}
-                      className="bg-gray-300 text-black px-2 py-1"
-                    >
-                      +
-                    </button>
+              <div key={index} className="flex items-center justify-between bg-white p-4 rounded-lg shadow mb-4">
+                <div className="flex items-center space-x-4">
+                  <img src={product.imgUrl} alt={product.productName} className="h-34 w-24 object-cover rounded-xl" />
+                  <div>
+                    <p className="text-lg font-semibold">{product.productName}</p>
+                    <p className="text-sm text-gray-500">${product.productPrice.toFixed(2)}</p>
+                    <div className="flex items-center mt-2">
+                      <button
+                        onClick={() => handleDecrement(product)}
+                        className="text-lg p-2 bg-gray-300 rounded hover:bg-gray-400 mr-2"
+                      >
+                        -
+                      </button>
+                      <span className="text-lg">{product.quantity}</span>
+                      <button
+                        onClick={() => handleIncrement(product)}
+                        className="text-lg p-2 bg-gray-300 rounded hover:bg-gray-400 ml-2"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <button
                   onClick={() => handleRemove(product)}
-                  className="bg-red-500 text-white px-4 py-2"
+                  className="ml-4 bg-red-500 hover:bg-red-600 text-white p-2 rounded"
                 >
                   Eliminar
                 </button>
               </div>
             ))}
-            <div className="mt-4 text-right">
-              <p className="text-xl font-semibold">Total: ${calculateTotal().toFixed(2)}</p>
+            <div className="text-right mt-4">
+              <p className="text-xl font-bold">Total: ${calculateTotal().toFixed(2)}</p>
             </div>
           </div>
         )}
