@@ -4,25 +4,28 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 export default function Profile() {
-  const router = useRouter();
-  const { access_token } = router.query;
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    if (access_token) {
-      axios.get('https://api.mercadolibre.com/users/me', {
-        headers: {
-          Authorization: `Bearer ${access_token}`
-        }
-      })
-      .then(response => {
-        setProfile(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching profile:', error);
-      });
+    if (typeof window !== 'undefined') {
+      const router = useRouter();
+      const { access_token } = router.query;
+
+      if (access_token) {
+        axios.get('https://api.mercadolibre.com/users/me', {
+          headers: {
+            Authorization: `Bearer ${access_token}`
+          }
+        })
+        .then(response => {
+          setProfile(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching profile:', error);
+        });
+      }
     }
-  }, [access_token]);
+  }, []);
 
   if (!profile) {
     return <div>Loading...</div>;
