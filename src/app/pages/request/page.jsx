@@ -1,7 +1,8 @@
+'use client'
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
+import Formulario from "@/components/Formulario"; // Asegúrate de que el nombre y la ruta del archivo sean correctos
 
 const Request = () => {
   return (
@@ -10,7 +11,8 @@ const Request = () => {
         <Navigation />
       </header>
       <main className="flex-grow flex flex-col justify-center items-center">
-        <p>Pagina para las peticiones</p>
+        <p>Pedidos de mayoreo </p>
+        <Formulario />  {/* Renderizar el componente Formulario correctamente */}
       </main>
       <footer>
         <Footer />
