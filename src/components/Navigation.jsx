@@ -27,6 +27,8 @@ const Navigation = () => {
         <Link href="/pages/products">Productos</Link>
         <Link href="/pages/installations">Instalaciones</Link>
         <Link href="/pages/request">Request</Link>
+        <Link href="/pages/cartContent">Cart</Link>
+
       </div>
     </div>
   );
