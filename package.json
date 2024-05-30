@@ -9,16 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@emailjs/browser": "^4.3.3",
-    "emailjs-com": "^3.2.0",
-=======
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.7.2",
->>>>>>> f01efd197cfcc2de1f8cc9f7cec7500362199f2a
     "firebase": "^10.12.1",
     "next": "^14.2.3",
     "react": "^18.2.0",
