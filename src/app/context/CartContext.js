@@ -10,7 +10,14 @@ export const CartProvider = ({ children }) => {
 
   // Función para agregar al carrito
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    const existingProduct = cart.find(item => item.key === product.key);
+    if (existingProduct) {
+      setCart(cart.map(item =>
+        item.key === product.key ? { ...item, quantity: item.quantity + 1 } : item
+      ));
+    } else {
+      setCart((prevCart) => [...prevCart, { ...product, quantity: 1 }]);
+    }
   };
 
   // Función para remover del carrito
@@ -20,10 +27,17 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  console.log("CartProvider renderizado", { cart, addToCart, removeFromCart }); // Verificación
+  // Función para actualizar la cantidad
+  const updateQuantity = (product, quantity) => {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.key === product.key ? { ...item, quantity } : item
+      )
+    );
+  };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity }}>
       {children}
     </CartContext.Provider>
   );
@@ -35,6 +49,5 @@ export const useCart = () => {
   if (!context) {
     throw new Error("useCart must be used within a CartProvider");
   }
-  console.log("useCart hook", context); // Verificación
   return context;
 };
