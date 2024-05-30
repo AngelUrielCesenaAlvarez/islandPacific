@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Formulario from "@/components/Formulario"; // Asegúrate de que el nombre y la ruta del archivo sean correctos
+import Formulario from "@/components/Formulario";
 
 const Request = () => {
   return (
@@ -12,7 +12,7 @@ const Request = () => {
       </header>
       <main className="flex-grow flex flex-col justify-center items-center">
         <p>Pedidos de mayoreo </p>
-        <Formulario />  
+        <Formulario/>
       </main>
       <footer>
         <Footer />
