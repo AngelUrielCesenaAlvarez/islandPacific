@@ -24,10 +24,10 @@ const Navigation = () => {
 
       <div className="flex justify-center space-x-10 p-6 bg-[#03045E] text-[#fff] ">
         <Link href="/">Home</Link>
-        <Link href="/pages/products">Productos</Link>
-        <Link href="/pages/installations">Instalaciones</Link>
-        <Link href="/pages/request">Request</Link>
-        <Link href="/pages/cartContent">Cart</Link>
+        <Link href="/page/products">Productos</Link>
+        <Link href="/page/installations">Instalaciones</Link>
+        <Link href="/page/request">Request</Link>
+        <Link href="/page/cartContent">Cart</Link>
 
       </div>
     </div>
