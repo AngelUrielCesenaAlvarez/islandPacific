@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const Formulario = () => {
   const [formData, setFormData] = useState({
@@ -38,9 +38,9 @@ const Formulario = () => {
   };
 
   return (
-    <form onSubmit={manejarEnvio} className="max-w-lg mx-auto mt-8">
+    <form onSubmit={manejarEnvio} className="max-w-lg mx-auto mt-8 items-center">
       <div className="mb-4">
-        <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">nombre:</label>
+        <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">Nombre / Empresa:</label>
         <input type="text" name="nombre" value={formData.nombre} onChange={manejarCambio} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
       </div>
       <div className="mb-4">
