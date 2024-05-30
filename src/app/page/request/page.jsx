@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-//import Formulario from "@/components/Formulario";
+import Formulario from "@/components/Formulario";
 
 const Request = () => {
   return (
@@ -10,9 +10,9 @@ const Request = () => {
       <header>
         <Navigation />
       </header>
-      <main className="flex-grow flex flex-col justify-center items-center">
+      <main className="flex-grow flex flex-col justify-center items-center m-10">
         <p>Pedidos de mayoreo</p>
-        {/* <Formulario /> */}
+        { <Formulario />}
       </main>
       <footer>
         <Footer />
