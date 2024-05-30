@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Formulario from "../../../components/Formulario";
+import Formulario from "@/components/Formulario";
 
 const Request = () => {
   return (

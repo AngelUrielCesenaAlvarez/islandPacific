@@ -26,7 +26,7 @@ const Formulario = () => {
         alert('¡Mensaje enviado!');
       }, (error) => {
         console.log(error.text);
-        alert('Error al enviar el mensaje.');
+        alert('Error al enviar el mensaje.'); 
       });
 
     setFormData({
