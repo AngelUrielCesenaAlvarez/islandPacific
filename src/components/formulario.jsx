@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const Formulario = () => {
   const [formData, setFormData] = useState({
