@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import config from '@/app/config/mercadoLibre';
 const LoginButton = () => {
   const handleLogin = () => {
@@ -8,7 +7,10 @@ const LoginButton = () => {
   };
 
   return (
-    <button onClick={handleLogin}>
+    <button 
+      onClick={handleLogin} 
+      style={{ color: 'blue', textDecoration: 'underline', background: 'none', border: 'none', cursor: 'pointer' }}
+    >
       Iniciar sesión con Mercado Libre
     </button>
   );

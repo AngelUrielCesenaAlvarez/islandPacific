@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import LoginButton from "@/components/LoginButton";
 import Navigation from "@/components/Navigation";
-import React from "react";
 
 const HomePage = () => {
   return (
@@ -20,7 +19,7 @@ const HomePage = () => {
               La Cooperativa Buzos y Pescadores es una empresa originaria del Pacífico Norte Mexicano, con una planta de procesamiento pesquero llamada PEMIN en Isla Natividad, Baja California Sur. La cooperativa se enfoca en la comercialización de especies marinas de calidad internacional, bajo la marca registrada de Island Pacific.
             </p>
           </div>
-          <img src="https://islandpacific.com.mx/wp-content/uploads/2023/09/logo_transparente120.png" alt="logo" className="md:w-1/2 mt-4 md:mt-0" />
+          <img src="https://www.fedecoop.com.mx/assets/img/BuzosYPescadores.png" alt="logo" className="md:w-1/2 mt-4 md:mt-0" />
         </div>
 
         <div className="flex flex-col md:flex-row items-center mb-10 bg-white p-6 rounded-lg shadow-lg">
