@@ -51,7 +51,7 @@ const Formulario = () => {
     />
   </div>
   <div className="mb-4">
-    <label htmlFor="telefono" className="block text-gray-700 text-sm font-bold mb-2">Contacto:</label>
+    <label htmlFor="telefono" className="block text-gray-700 text-sm font-bold mb-2">Telefono de contacto:</label>
     <input
       type="text"
       name="telefono"
@@ -73,7 +73,7 @@ const Formulario = () => {
     />
   </div>
   <div className="mb-6">
-    <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Asunto:</label>
+    <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Pedido:</label>
     <textarea
       name="mensaje"
       value={formData.mensaje}

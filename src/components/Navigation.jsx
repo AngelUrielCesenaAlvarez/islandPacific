@@ -27,11 +27,11 @@ const Navigation = () => {
         </ul>
       </div>
       <div className="flex justify-center space-x-6 py-3 bg-blue-900">
-        <Link href="/">Home</Link>
+        <Link href="/">Inicio</Link>
         <Link href="/page/products">Productos</Link>
         <Link href="/page/installations">Instalaciones</Link>
-        <Link href="/page/request">Request</Link>
-        <Link href="/page/cartContent">Cart</Link>
+        <Link href="/page/request">Peticiones</Link>
+        <Link href="/page/cartContent">Carrito</Link>
       </div>
     </div>
   );
