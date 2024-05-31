@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -36,10 +36,13 @@ const Products = () => {
       <header>
         <Navigation />
       </header>
-      <main className="grid grid-cols-2">
-        {items.map((product) => (
-          <Post key={product.key} product={product} addToCart={addToCart} />
-        ))}
+      <main>
+        <h1 className="flex justify-center text-3xl font-bold mb-8 mt-4">Nuestros productos </h1>
+        <div className="grid grid-cols-2">
+          {items.map((product) => (
+            <Post key={product.key} product={product} addToCart={addToCart} />
+          ))}
+        </div>
       </main>
       <footer>
         <Footer />

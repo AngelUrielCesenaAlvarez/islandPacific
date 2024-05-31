@@ -60,14 +60,14 @@ const Navigation = () => {
           <Link href="/" className="px-4 py-2">
             Inicio
           </Link>
-          <Link href="/page/products" className="px-4 py-2">
-            Productos
-          </Link>
           <Link href="/page/installations" className="px-4 py-2">
             Instalaciones
           </Link>
           <Link href="/page/request" className="px-4 py-2">
             Peticiones
+          </Link>
+          <Link href="/page/products" className="px-4 py-2">
+            Productos
           </Link>
           <Link href="/page/cartContent" className="px-4 py-2">
             Carrito
