@@ -9,10 +9,10 @@ const Request = () => {
         <Navigation />
       </header>
       <main className="flex-grow flex flex-col justify-center items-center m-10">
-        <p>Pedidos de mayoreo</p>
+        <p className="text-xl">Pedidos de mayoreo</p>
 {/*         <Formulario />
  */}      </main>
-      <footer>
+      <footer> 
         <Footer />
       </footer>
     </div>
