@@ -24,7 +24,7 @@ const installationsData = [
   },
   {
     title: "Clientes",
-    description: "Contamos con clientes que respaldan la calidad de nuestros servicios",
+    description: "Contamos con clientes que respaldan la calidad de nuestros servicios.",
     imageUrl: "https://scontent.ftij5-1.fna.fbcdn.net/v/t39.30808-6/360157737_742209227910237_2702371129537979506_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFUNUfcRktq-XUrQ3OEcGIbIg0uqVjR4YciDS6pWNHhh6mc6RDhUpeoIrQA5R1JEANaL6HLV6sHzibC2alEg_rI&_nc_ohc=d47BQO3klOwQ7kNvgHp0YLf&_nc_ht=scontent.ftij5-1.fna&oh=00_AYALDHFWX8RMz15hQC_7yD8euGoA8_krRk8MdYSXmEXLYA&oe=665EA247"
   },
   {
