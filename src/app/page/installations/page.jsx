@@ -19,7 +19,7 @@ const installationsData = [
   },
   {
     title: "Pesca",
-    description: "",
+    description: "Nuestro personal cuenta con años de experiencia en trabajar en el mar para brindar los mejores productos",
     imageUrl: "https://scontent.ftij5-1.fna.fbcdn.net/v/t39.30808-6/357405116_734115925386234_7244424777159838658_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjM77oM-eVJ2yiTDRbgqgCcL7xItPxmmBwvvEi0_GaYNugGCctqBPj8vlVLZjmxihde2nY83nLu244IO0o6RH_&_nc_ohc=9FL_Sru-l4UQ7kNvgHnPhJ_&_nc_ht=scontent.ftij5-1.fna&oh=00_AYASxiIlFALRARz1MrUAIXOaXy6wkHUgYYxmvZFNYVWH0w&oe=665EB5BC"
   },
   {

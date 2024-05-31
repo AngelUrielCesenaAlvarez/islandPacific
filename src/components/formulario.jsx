@@ -40,7 +40,7 @@ const Formulario = () => {
   return (
     <form onSubmit={manejarEnvio} className="max-w-lg mx-auto mt-8">
       <div className="mb-4">
-        <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">nombre:</label>
+        <label htmlFor="nombre" className="block text-gray-700 text-sm font-bold mb-2">Nombre de la empresa:</label>
         <input type="text" name="nombre" value={formData.nombre} onChange={manejarCambio} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
       </div>
       <div className="mb-4">
@@ -52,7 +52,7 @@ const Formulario = () => {
         <input type="email" name="correo" value={formData.correo} onChange={manejarCambio} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
       </div>
       <div className="mb-6">
-        <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+        <label htmlFor="mensaje" className="block text-gray-700 text-sm font-bold mb-2">Pedido:</label>
         <textarea name="mensaje" value={formData.mensaje} onChange={manejarCambio} className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required />
       </div>
       <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Enviar</button>
