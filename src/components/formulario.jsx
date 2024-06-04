@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const Formulario = () => {
   const [formData, setFormData] = useState({
-    nombre: "",
-    telefono: "",
-    correo: "",
-    mensaje: "",
+    nombreEmpresa: "",
+    telefonoEmpresa: "",
+    correoEmpresa: "",
+    descripcionPedido: "",
   });
 
   const manejarCambio = (e) => {
@@ -22,10 +22,10 @@ const Formulario = () => {
 
     emailjs
       .sendForm(
-        "service_r8wwt8z",
-        "template_f4hmh0h",
+        "service_smy3m1k",
+        "template_3rsphws",
         e.target,
-        "8FTULWrw_ktpfhFJP"
+        "Y_WMN1gz6tTFNfugH"
       )
       .then(
         (result) => {
@@ -39,10 +39,10 @@ const Formulario = () => {
       );
 
     setFormData({
-      nombre: "",
-      telefono: "",
-      correo: "",
-      mensaje: "",
+      nombreEmpresa: "",
+      telefonoEmpresa: "",
+      correoEmpresa: "",
+      descripcionPedido: "",
     });
   };
 
@@ -50,15 +50,15 @@ const Formulario = () => {
     <form onSubmit={manejarEnvio} className="max-w-lg mx-auto mt-8">
       <div className="mb-4">
         <label
-          htmlFor="nombre"
+          htmlFor="nombreEmpresa"
           className="block text-gray-700 text-sm font-bold mb-2"
         >
           Nombre de la empresa:
         </label>
         <input
           type="text"
-          name="nombre"
-          value={formData.nombre}
+          name="nombreEmpresa"
+          value={formData.nombreEmpresa}
           onChange={manejarCambio}
           className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           required
@@ -66,15 +66,15 @@ const Formulario = () => {
       </div>
       <div className="mb-4">
         <label
-          htmlFor="telefono"
+          htmlFor="telefonoEmpresa"
           className="block text-gray-700 text-sm font-bold mb-2"
         >
           Teléfono:
         </label>
         <input
           type="text"
-          name="telefono"
-          value={formData.telefono}
+          name="telefonoEmpresa"
+          value={formData.telefonoEmpresa}
           onChange={manejarCambio}
           className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           required
@@ -82,15 +82,15 @@ const Formulario = () => {
       </div>
       <div className="mb-4">
         <label
-          htmlFor="correo"
+          htmlFor="correoEmpresa"
           className="block text-gray-700 text-sm font-bold mb-2"
         >
           Correo:
         </label>
         <input
           type="email"
-          name="correo"
-          value={formData.correo}
+          name="correoEmpresa"
+          value={formData.correoEmpresa}
           onChange={manejarCambio}
           className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           required
@@ -98,14 +98,14 @@ const Formulario = () => {
       </div>
       <div className="mb-6">
         <label
-          htmlFor="mensaje"
+          htmlFor="descripcionPedido"
           className="block text-gray-700 text-sm font-bold mb-2"
         >
           Pedido:
         </label>
         <textarea
-          name="mensaje"
-          value={formData.mensaje}
+          name="descripcionPedido"
+          value={formData.descripcionPedido}
           onChange={manejarCambio}
           className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           required
